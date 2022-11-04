@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="user_story_form_view">
+			<field name="name">user.story</field>
+			<field name="model">user.story</field>
+			<field name="arch" type="xml">
+				<form string="Documents">
+				<sheet>
+				<group>
+				<field name="name" />
+				<field name="partner_id" invisible="1"/>
+				<field name="project" />
+				<field name="stage_id" options="{&quot;group_by_tooltip&quot;: {&quot;description&quot;: &quot;Stage Description&quot;, &quot;legend_priority&quot;: &quot;Use of stars&quot;}}"/>
+				<field name="description"  widget="html"/>
+				</group>
+				</sheet>
+				<div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+			</form>
+		</field>
+		</record>
+		<record model="ir.ui.view" id="user_story_tree_view">
+			<field name="name">user.story</field>
+			<field name="model">user.story</field>
+			<field name="arch" type="xml">
+			<tree>
+				<field name="name" />
+				<field name="partner_id" invisible="1"/>
+				<field name="project" />
+				<field name="description" />
+			</tree>
+            </field>
+        </record>	
+        <record model="ir.ui.view" id="user_story_kanban_view">
+		    <field name="name">user.story</field>
+		    <field name="model">user.story</field>
+		    <field name="type">kanban</field>
+		    <field name="arch" type="xml">
+		        <kanban default_group_by="stage_id" class="o_kanban_small_column o_kanban_project_tasks">
+		        <field name="name" />
+				<field name="partner_id" invisible="1"/>
+				<field name="project" />
+				<field name="image" />
+				<field name="stage_id"  options="{&quot;group_by_tooltip&quot;: {&quot;name&quot;: &quot;Stage Name&quot;}}"/>/>
+				<field name="id" />
+				<progressbar field="kanban_state" colors="{&quot;done&quot;: &quot;success&quot;, &quot;blocked&quot;: &quot;danger&quot;}"/>
+		            <templates>
+                    <t t-name="kanban-box">
+                    <div class="oe_resource_vignette">
+                        <div class="oe_resource_image">
+                            <a type="edit"><img t-att-src="kanban_image('user.story', 'image', record.id.value)" 
+                            class="oe_resource_picture" style="width: 60px;"/></a>
+                        </div>
+                        <ul>
+	                        <li>
+	                        <field name="name" />
+	                        </li>
+	                        <li>
+	                        <field name="partner_id" />
+	                        </li>
+	                        <li>
+	                        <field name="project" />
+	                        </li>
+                        </ul>
+                    </div>                      
+                </t>
+            </templates>
+		        </kanban>
+		    </field>
+		</record>		
+		<record model="ir.actions.act_window" id="user_story_action">
+		    <field name="name">User Stories</field>
+		    <field name="type">ir.actions.act_window</field>
+		    <field name="res_model">user.story</field>
+		    <field name="view_type">form</field>
+		    <field name="view_mode">kanban,tree,form</field>
+		    <field name="context">{'group_by': 'stage_id'}</field>
+		    <field name="view_id" ref="darfproject.user_story_tree_view" />
+		</record>
+		<menuitem
+            id="user_story"
+            name="User Story"
+            web_icon="darfproject,static/description/document.png"
+            action="user_story_action"
+            sequence="6"/>
+	</data>
+</odoo>

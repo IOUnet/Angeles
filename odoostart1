@@ -1,0 +1,42 @@
+# КИКСТАРТ 
+
+#sudo docker exec -it db pg_dump -U odoo darfchain > darfchain0210.pgsql
+docker run -d -e POSTGRES_USER=odoo -e POSTGRES_PASSWORD=odoo -e POSTGRES_DB=postgres --name db postgres:10
+
+# https://stackoverflow.com/questions/30641512/create-database-from-command-line
+#cat ./darfchain0210.pgsql  | docker exec db psql -U odoo -d darfchain
+docker cp ./darfchain0210.pgsql db:/
+
+#docker exec -it db psql -U odoo  -c "DROP DATABASE DARFCHAIN"
+#  psql -U odoo -d postgres -c "DROP DATABASE DARFCHAIN"
+# >>DROP DATABASE
+#  psql -U odoo -d postgres -c "create database darfchain;"
+# >>CREATE DATABASE
+#  psql -U odoo -d darfchain < /darfchain0210.pgsql
+
+docker exec -it db  psql -U odoo -d postgres
+# внутре
+psql -U odoo -d postgres
+# внутре psqlя 
+create database darfchain; 
+\c darfchain 
+\i /darfchain0210.pgsql \
+#если  ошибки ftp
+DROP DATABASE DARFCHAIN 
+
+
+
+docker run --restart=always  -d -p 80:8069 --name odoo --link db:db --mount type=bind,source=/home/odoo/angeles/3ae8838c4b29736cd650a9c1f957bf36a78f52aa7b486cfdfd93e83c97e1334d/_data/filestore/,target=/var/lib/odoo/filestore/ --mount type=bind,source=/home/odoo/angeles/addons11/,target=/mnt/extra-addons/   -t odoo:11.0 
+
+docker exec -itu root odoo bash
+# внутре
+ apt update
+apt install python3-dev gcc mc python3-passlib 
+
+pip3 install wheels web3 py-solc mailchimp3
+
+
+
+# в Докере s docker-entrypoint.sh добавить в запуск после  odoo: -u darfproject 
+# потом убрать ибо долго стартует (или нет)
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record model="ir.ui.view" id="mint_token">
+			<field name="project_token_name">project.project_token_name</field>
+            <field name="project_token_symbol">project.project_token_symbol</field>
+			<!-- field name="addr_CN_argeement">project.addr_CN_argeement</field -->
+            <field name="token_amount">project.token_amount</field>
+			<!-- field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+			  <xpath expr="//sheet/notebook/page[1]" position="after">
+
+			  </xpath>
+			</field -->
+		</record>
+        <!-- menuitem
+            id="mint_token"
+            name="Emit projects token"
+            parent = "darfproject.project_estimate_menu"
+            web_icon="darfproject,static/description/document.png"
+            action="project_mint_token"
+            sequence="6"/ -->
+	</data>
+</odoo>
