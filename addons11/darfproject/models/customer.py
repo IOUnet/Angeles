@@ -70,6 +70,33 @@ class CustomerInvestment(models.Model):
     project = fields.Boolean(string="Is project")
     area_of_investment = fields.Many2many('area.of.investment',string="Areas of investment")
     stage_investing = fields.Many2many('stage.of.investing',string="Stage of investment")
+    date_birth = fields.date(string="Day of Birth")
+    state =  fields.Char(string="State of birth")
+    citizenship = fields.Char(string="Citizenship")
+    personal_inn = fields.Char(string="Personal tax ID")
+    living_address =  fields.Char(string="Address of living")
+    gender = fields.Char(string="Gender")
+    phone_number = fields.Char(string="Phone Number")
+    education_school = fields.Char(string="Finished school or college or univercity ") #TODO make import from dictionary
+    education_year = fields.Number(string="Year of completing") 
+    education_speciality = fields.Char(string="Graduated speciality") #TODO make import from dictionary
+    occupation = fields.Selection(                                
+                                  [('business', 'Business'),
+                                   ('entrepreneurship', 'Entrepreneurship'),
+                                 ('self-employing', 'Self-employing'), 
+                                 ('employing', 'Employing'),  
+                                 ('student', 'Student') ], string="Occupation " ) 
+    work_experience = fields.Number(string="Years of experience") 
+    skills = fields.Text(string="Professional skills")
+    achievements = fields.Text(string="Professional achievements")
+    resume_portfolio = fields.Text(string="Link(s) to CV, portfolio, Github, etc")
+    have_team = fields.Boolean(string="Have a team?")
+    team_role = fields.Char(string="Role in team")
+    have_intellectual_property = fields.Boolean(string="Have a patents or over IP?")
+    patents =  fields.Char(string="Refs to patents, other IP ")
+    have_company = fields.Boolean(string="Have a company?")
+    company_inn = fields.Char(string="Company tax ID")
+    
     #todo add KYC fields here and in views
     # document_type
     # document_number

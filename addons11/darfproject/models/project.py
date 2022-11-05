@@ -30,7 +30,7 @@ class ProjectInvestingInformation(models.Model):
     exchange_rate = fields.Float(string="Exchange Rate")
     exchange_price = fields.Float(string="Exchange price")
     tokens_price = fields.Float(string="Token's Price")
-
+    
 
     #
     #passport of project
@@ -44,19 +44,31 @@ class ProjectInvestingInformation(models.Model):
     cagr = fields.Float(string="Compound Annual Growth Rate (CAGR)")
     planned_share_market = fields.Float(string="Planned share of the market")
     market = fields.Text(string="Market")
+    presentation = fields.Char(string = "Link to presentation")
+
     #Technology
     technology = fields.Text(string="Technology")
+    patents = fields.Text(string = "Link(s) to scans of patents, other IP")
+    review = fields.Text(string = "Links to expert's reviews")
+    other_level_proofs = fields.Text (string = "Links to proofs of project's level")
 
     #finance
     total_investment = fields.Float(string="Total investment")
     finance_description = fields.Text(string="Description")
     open_close_for_investment = fields.Boolean()
-    forms_of_investment = fields.Selection([('ICO', 'ico'), ('DAICO', 'daico')],
+    forms_of_investment = fields.Selection([('bootstraping', 'bootstraping'), 
+                                            ('Angels', 'Angels investments'), 
+                                            ('vc', 'Venture Funds'), 
+                                            ('crowdinvesting', 'Crowd Investing'), 
+                                            ('DAICO', 'daico')],
     string="Forms of investment")  # todo add VC, angels forms
     investment_condition = fields.Text(string="Investment conditions")
-    term_and_condition = fields.Text(string="Finanve terms & Conditions")
+    term_and_condition = fields.Text(string="Finance terms & Conditions")
     round_of_investment = fields.One2many('round.investment', 'project_id', string="Rounds of investment")
     areas_of_investment = fields.Many2many('area.of.investment', string="Select area of project")
+    annual_revenue = fields.Float(string = "Annual revenue")
+    business_plan = fields.Char(string = "Link to business plan")
+    
 
     #Legal issues
     legal_issues = fields.Text(string="Legal Issues")
