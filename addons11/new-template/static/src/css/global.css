@@ -1,0 +1,25 @@
+:root {
+    --gray: #F5F5F5;
+    --dark-gray: #E0E0E0;
+    --orange: #FF3D00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Golos', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

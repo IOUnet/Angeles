@@ -1,0 +1,98 @@
+.support-methods {
+    margin-top: 109px;
+}
+
+.support-methods__top {
+    margin: 0 auto;
+    display: flex;
+}
+
+.support-methods__top-heading {
+    font-weight: 600;
+    font-size: 36px;
+    font-style: italic;
+}
+
+
+.support-methods__top-button {
+    font-weight: 500;
+    font-size: 28px;
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-methods__content {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.support-methods__production-support {
+    flex: 4;
+    padding: 0 94px;
+    max-height: 337px;
+    background: linear-gradient(112.59deg, rgba(0, 0, 0, 0.2) 1.64%, rgba(0, 0, 0, 0) 64.69%), linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #0047FF;;
+    border-radius: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+
+
+.support-methods__production-support-text {
+    font-size: 36px;
+    line-height: 110%;
+    font-style: italic;
+    color: white;
+}
+
+.support-methods__divider-line {
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    height: 50%;
+    transform: rotate(0deg);
+}
+
+
+.support-methods__production-support-emblem {
+    height: 95px;
+}
+
+.support-methods__book-img {
+    position: relative;
+    bottom: 15%;
+    left: 3%;
+}
+
+
+.support-methods__startup-financing {
+    box-sizing: border-box;
+    max-height: 337px;
+    padding: 52px 40px;
+    background: linear-gradient(112.59deg, rgba(255, 255, 255, 0.122) 1.64%, rgba(255, 255, 255, 0) 64.69%), #32343C;
+    border-radius: 72px;
+    display: flex;
+    flex: 3;
+}
+
+.support-methods__startup-financing-text {
+    font-style: italic;
+    font-size: 36px;
+    line-height: 110%;
+    color: white;
+    margin-bottom: 100%;
+}
+
+.support-methods__startup-financing-img {
+    position: relative;
+    margin-top: auto;
+    margin-left: auto;
+}

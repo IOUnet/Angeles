@@ -1,0 +1,59 @@
+/* --- TEAMS --- */
+.teams {
+    margin-top: 102px;
+}
+
+.teams__top {
+    display: flex;
+}
+
+.teams__top-heading {
+    font-weight: 600;
+    font-size: 36px;
+    font-style: italic;
+    text-align: end;
+}
+
+.teams__top-text {
+    margin-right: 24px;
+}
+
+.teams__top-button {
+    font-weight: 500;
+    font-size: 28px;
+    background-color: var(--dark-gray);
+    border-radius: 50%;
+    width: 72px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.teams__content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    margin-top: 34px;
+    justify-content: space-between;
+}
+
+.teams__item {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 72px;
+    padding: 23px 26px;
+    display: flex;
+    max-width: 444px;
+    margin-bottom: 12px;
+}
+
+.teams__item-text {
+    margin-left: 16px;
+}
+
+.teams__item-heading {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 100%;
+}

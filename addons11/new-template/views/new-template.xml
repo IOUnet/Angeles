@@ -1,0 +1,333 @@
+<odoo>
+    <template id="new-template">
+        <link rel="stylesheet" href="/new-template/static/src/css/style.css" type="text/css" />
+        <header class="header">
+            <div class="header__left-slot">
+                Logo
+            </div>
+            <nav class="header__middle-slot header__nav">
+                <div class="header__nav-item">
+                    Проекты
+                </div>
+                <div class="header__nav-item">
+                    Команды
+                </div>
+                <div class="header__nav-item">
+                    Поддержка
+                </div>
+                <div class="header__nav-item">
+                    О проекте
+                </div>
+            </nav>
+
+            <div class="header__right-slot">
+                <a href="" class="header__create-project">
+                    Создать проект
+                </a>
+                <div class="header__notifications">
+                    <img src="./src/assets/icons/notification.svg" alt="" srcset="" />
+                </div>
+                <div class="header__account">
+                    <span>T</span>
+                </div>
+            </div>
+        </header>
+
+        <section class="projects container">
+            <h1 class="projects__heading">
+                Проекты
+            </h1>
+            <div class="projects__search">
+                <input placeholder="Поиск проектов" class="projects__search-input" type="text" />
+                <div class="projects__search-settings">
+                    <img src="./src/assets/icons/settings.svg" alt="" srcset="" />
+                </div>
+            </div>
+            <div class="projects__content">
+                <div class="projects__first-row">
+                    <div class="projects__first-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__first-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__first-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__first-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                </div>
+                <div class="projects__second-row">
+                    <div class="projects__second-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__second-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__second-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__second-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                    <div class="projects__second-row-card projects__card">
+                        <div class="projects__card-top">
+                        </div>
+                        <div class="projects__card-content">
+                            <div class="projects__card-content-heading">
+                                Manufacture and sale...
+                            </div>
+                            <div class="projects__card-content-description">
+                                Even blush picture body weeks man debating sorry. Pretended though...
+                            </div>
+                        </div>
+                        <div class="projects__card-bottom">
+                            Read more ->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="support-methods container">
+            <div class="support-methods__top">
+                <div class="support-methods__top-text">
+                    <div class="support-methods__top-heading">
+                        Меры поддержки
+                    </div>
+                    <div class="support-methods__top-description">
+                        Получи актуальную информацию от ДПИИ
+                    </div>
+                </div>
+                <div class="support-methods__top-button">
+                    <span>
+                        ->
+                    </span>
+                </div>
+            </div>
+            <div class="support-methods__content">
+                <div class="support-methods__production-support">
+                    <div class="support-methods__production-support-text">
+                        Поддержка <br />
+                        полиграфических <br />
+                        производств
+                    </div>
+
+                    <div class="support-methods__divider-line">
+
+                    </div>
+
+                    <img class="support-methods__production-support-emblem" src="src/assets/img/emblem.png" />
+
+                    <img class="support-methods__book-img" src="src/assets/img/floating-book.png" />
+                </div>
+                <div class="support-methods__startup-financing">
+                    <div class="support-methods__startup-financing-text">
+                        Финансирование <br />
+                        геологических <br />
+                        стартапов
+                    </div>
+
+                    <img class="support-methods__startup-financing-img" src="src/assets/img/rock.png" alt="" />
+
+                </div>
+            </div>
+        </section>
+
+        <section class="teams container">
+            <div class="teams__top">
+                <div class="teams__top-text">
+                    <div class="teams__top-heading">
+                        Команды
+                    </div>
+                    <div class="teams__top-description">
+                        Актуальные вакансии в стартапы
+                    </div>
+                </div>
+                <div class="teams__top-button">
+                    <span>
+                        ->
+                    </span>
+                </div>
+            </div>
+            <div class="teams__content">
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+                <div class="teams__item">
+                    <img src="./src/assets/img/avatar.png" alt="" />
+                    <div class="teams__item-text">
+                        <div class="teams__item-heading">
+                            Дизайнер
+                        </div>
+                        <div class="teams__item-description">
+                            Требуется дизайнер в команду Blsaфвывыdd для работы над ин...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </template>
+</odoo>
