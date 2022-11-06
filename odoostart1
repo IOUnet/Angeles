@@ -27,20 +27,20 @@ DROP DATABASE DARFCHAIN
 
 
 
-docker run --restart=always  -d -p 80:8069 --name odoo --link db:db --mount type=bind,source=/home/odoo/angeles/3ae8838c4b29736cd650a9c1f957bf36a78f52aa7b486cfdfd93e83c97e1334d/_data/filestore/,target=/var/lib/odoo/filestore/ --mount type=bind,source=/home/odoo/angeles/addons11/,target=/mnt/extra-addons/   -t odoo:11.0 
+docker run --restart=always  -d -p 8069:8069 --name odoo --link db:db --mount type=bind,source=/512-2/dfd/angeles/3ae8838c4b29736cd650a9c1f957bf36a78f52aa7b486cfdfd93e83c97e1334d/_data/filestore/,target=/var/lib/odoo/filestore/ --mount type=bind,source=/512-2/dfd/Angeles/addons11,target=/mnt/extra-addons/   -t odoo:11.0 
 
 #если порт 80 занят какой-то другой хренью, нужно поменять порт в  -p 80: потом  удалить и пересобрать контейнер
 
 
 docker exec -itu root odoo bash
 # внутре докера odoo
-apt update
-apt install python3-dev gcc mc python3-passlib 
-pip3 install wheel cpython
+apt update && apt install python3-dev gcc mc python3-passlib 
+#pip3 install wheel cpython
 # потом, если нормально установится!
-pip3 install  web3 py-solc mailchimp3
+#pip3 install  web3  
+pip3 install mailchimp3
 #далее обновляем модели проекта
- odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u darfproject
+ odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u all
 #потом выйти , снаружи, 
 docker restart odoo
 #в браузере на
