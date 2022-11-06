@@ -16,6 +16,32 @@
  				  </group>
 
 			  </page>
+			   <page string="Participant or project">
+			  <group>
+			  <field name="full_name" />
+			  <field name="date_birth" />
+			  <field name="gender" />
+			  <field name="state" />
+			  <field name="citizenship" />
+			  <field name="living_address" />
+			  <field name="personal_inn" />
+			  <field name="phone_number" />
+			  <field name="education_school" />
+			  <field name="education_year" />
+			  <field name="education_speciality" />
+			  <field name="work_experience" />
+			  <field name="skills"   widget="html"/>
+			  <field name="achievements"  widget="html" />
+			  <field name="resume_portfolio"  widget="html" />
+			  <field name="have_team" />
+			  <field name="team_role" />
+			  <field name="have_intellectual_property" />
+			  <field name="patents" />  
+			  <field name="have_company" />
+			  <field name="company_inn" />	  
+			  </group>
+
+			  </page>
 			  <page string="Investments">
 			  <group>
 			  <field name="ethereum_address" />

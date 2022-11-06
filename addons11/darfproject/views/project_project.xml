@@ -23,6 +23,7 @@
 						<field name="cagr" />
 						<field name="market_size" />
 						<field name="planned_share_market" />
+						<field name="presentation" />
 					</group>
 			    </page>
 			    <page string="Finance">
@@ -35,20 +36,27 @@
 						<field name="exchange_price" />
 						<field name="exchange_rate" />
 						<field name="areas_of_investment" />
-
+						<field name="annual_revenue" />
 						<field name="finance_description" widget="html"/>
-                        <field name="term_and_condition" widget="html" />
+						<field name="business_plan" />
+                        
 					</group>
 			    </page>
                   <page string="Law">
 					<group>
-                        <field name="legal_issues" widget="html"/>
 
+                        <field name="legal_issues" widget="html"/>
+						<field name="term_and_condition" widget="html" />
                 	</group>
 			    </page>
 			    <page string="Technology">
 					<group>
 						<field name="technology" widget="html"/>
+						<field name="patents" widget="html"/>
+						<field name="review" widget="html"/>
+						<field name="other_level_proofs" widget="html"/>
+
+												
 					</group>
 			    </page>
 			    <page string="Project Team">
