@@ -29,7 +29,7 @@ DROP DATABASE DARFCHAIN
 # исправить путь к проекту на свой (изменить /512-2/dfd/)
 docker run --restart=always  -d -p 8069:8069 --name odoo --link db:db --mount type=bind,source=/512-2/dfd/Angeles/filestore/,target=/var/lib/odoo/filestore/ --mount type=bind,source=/512-2/dfd/Angeles/addons11,target=/mnt/extra-addons/   -t odoo:11.0 
 
-#если порт 80 занят какой-то другой хренью, нужно поменять порт в  -p 80: потом  удалить и пересобрать контейнер
+#если порт 8069 занят какой-то другой хренью, нужно поменять порт в  -p 8069: потом  удалить и пересобрать контейнер
 
 
 docker exec -itu root odoo bash
@@ -43,7 +43,7 @@ pip3 install mailchimp3
  odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u all
 #потом выйти , снаружи, 
 docker restart odoo
-#в браузере на
+#смотрим в браузере на localhost:8069
 # при коммите изменений   
 docker exec -u root odoo  odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u darfproject
 # когда обновится - ctrl+c 
