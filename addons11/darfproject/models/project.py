@@ -34,48 +34,49 @@ class ProjectInvestingInformation(models.Model):
 
     #
     #passport of project
-    description = fields.Text(string="Descriprion")
-    image = fields.Binary(string="Image ICO")
+    description = fields.Text(string="Описание")
+    image = fields.Binary(string="Логотип")
     image_medium = fields.Binary()
     image_small = fields.Binary()
-
+    areas_of_investment = fields.Many2many('area.of.investment', string="Область работы проекта")
+    
     #market
-    market_size = fields.Float(string="Market size")
-    cagr = fields.Float(string="Compound Annual Growth Rate (CAGR)")
-    planned_share_market = fields.Float(string="Planned share of the market")
-    market = fields.Text(string="Market")
-    presentation = fields.Char(string = "Link to presentation")
+    market_size = fields.Float(string="Размер рынка")
+    cagr = fields.Float(string="Годовой рост рынка в %%")
+    planned_share_market = fields.Float(string="Планируемая доля рынка")
+    market = fields.Text(string="Описание целевых групп, стратегии продвижения")
+    presentation = fields.Char(string = "Ссылка на презентацию")
 
     #Technology
-    technology = fields.Text(string="Technology")
-    patents = fields.Text(string = "Link(s) to scans of patents, other IP")
-    review = fields.Text(string = "Links to expert's reviews")
-    other_level_proofs = fields.Text (string = "Links to proofs of project's level")
+    technology = fields.Text(string="Технология")
+    patents = fields.Text(string = "Ссылка(и)  охранные документы (патенты, торговые марки и т.д.)")
+    review = fields.Text(string = "Подтверждение уровня развития проекта (ссылки на публикации, исследования, заключения), если есть")
+    other_level_proofs = fields.Text (string = "Фото/видео, подтверждающие работоспособность и/или характеристики проекта")
 
     #finance
-    total_investment = fields.Float(string="Total investment")
-    finance_description = fields.Text(string="Description")
+    total_investment = fields.Float(string="Желаемый объем инвестиций")
+    finance_description = fields.Text(string="Описание бизнеса-модели")
     open_close_for_investment = fields.Boolean()
-    forms_of_investment = fields.Selection([('bootstraping', 'bootstraping'), 
-                                            ('Angels', 'Angels investments'), 
-                                            ('vc', 'Venture Funds'), 
-                                            ('crowdinvesting', 'Crowd Investing'), 
-                                            ('DAICO', 'daico')],
-    string="Forms of investment")  # todo add VC, angels forms
-    investment_condition = fields.Text(string="Investment conditions")
-    term_and_condition = fields.Text(string="Finance terms & Conditions")
-    round_of_investment = fields.One2many('round.investment', 'project_id', string="Rounds of investment")
-    areas_of_investment = fields.Many2many('area.of.investment', string="Select area of project")
-    annual_revenue = fields.Float(string = "Annual revenue")
-    business_plan = fields.Char(string = "Link to business plan")
+    forms_of_investment = fields.Selection([('bootstraping', 'На свои средства'), 
+                                            ('Angels', 'Ангельские инвестиции'), 
+                                            ('vc', 'Венсурные фонды'), 
+                                            ('crowdinvesting', 'Краудинвестинг'), 
+                                            ('DAICO', 'DAICO')],
+    string="Формы инвестиций")  # todo add VC, angels forms
+    investment_condition = fields.Text(string="Условия привлечения инвестиций")
+    term_and_condition = fields.Text(string="Финансовые условия ")
+    round_of_investment = fields.One2many('round.investment', 'project_id', string="Раунды инвестиций")
+    
+    annual_revenue = fields.Float(string = "Имеющаяся годовая выручка ")
+    business_plan = fields.Char(string = "Ссылка на бизнес-план")
     
 
     #Legal issues
     legal_issues = fields.Text(string="Legal Issues")
     moderator_check = fields.Boolean(string="test",compute = "_moderator_check")
-    publish_on_web = fields.Boolean(string="Publish on WEB")
+    publish_on_web = fields.Boolean(string="Опубликовать")
 
-    website_url = fields.Char(string="Website of project")
+    website_url = fields.Char(string="Ссылка на сайт проекта")
     #  Team
     project_team = fields.One2many('project.team','project_id',string="Project Team")
 

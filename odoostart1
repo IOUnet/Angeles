@@ -45,7 +45,7 @@ pip3 install mailchimp3
 docker restart odoo
 #смотрим в браузере на localhost:8069
 # при коммите изменений   
-docker exec -u root odoo  odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u darfproject
+docker exec -u root odoo  odoo -p 8015 -d postgres -r odoo -w odoo --db_host DB --db_port 5432 -u all
 # когда обновится - ctrl+c 
 docker restart odoo
 

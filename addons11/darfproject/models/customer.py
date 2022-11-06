@@ -66,37 +66,37 @@ class CustomerInvestment(models.Model):
     ethereum_address = fields.Char(string="Ethereum address")
     use_ethereum_address_for_login = fields.Boolean(string="Use ethereum address for login")
     bitcoin_address = fields.Char(string="Bitcoin address")
-    investor = fields.Boolean(string="Is investor")
-    project = fields.Boolean(string="Is project")
-    area_of_investment = fields.Many2many('area.of.investment',string="Areas of investment")
-    stage_investing = fields.Many2many('stage.of.investing',string="Stage of investment")
-    full_name =  fields.Char(string="Full name")
-    date_birth = fields.Date(string="Day of birth")
-    state =  fields.Char(string="State of birth")
-    citizenship = fields.Char(string="Citizenship")
-    personal_inn = fields.Char(string="Personal tax ID")
-    living_address =  fields.Char(string="Address of living")
-    gender = fields.Char(string="Gender")
-    phone_number = fields.Char(string="Phone Number")
-    education_school = fields.Char(string="Finished school or college or univercity ") #TODO make import from dictionary
-    education_year = fields.Integer(string="Year of completing") 
-    education_speciality = fields.Char(string="Graduated speciality") #TODO make import from dictionary
+    investor = fields.Boolean(string="Инвестор")
+    project = fields.Boolean(string="Участник")
+    area_of_investment = fields.Many2many('area.of.investment',string="Область инвестирования")
+    stage_investing = fields.Many2many('stage.of.investing',string="Раунды инвестирования")
+    full_name =  fields.Char(string="Фамилия, имя, отчество ")
+    date_birth = fields.Date(string="Дата рождения")
+    state =  fields.Char(string="Страна проживания")
+    citizenship = fields.Char(string="Гражданство ")
+    living_address =  fields.Char(string="Адрес проживания")
+    personal_inn = fields.Char(string="Персональный ИНН")
+    gender = fields.Char(string="Пол")
+    phone_number = fields.Char(string="Контактный номер телефона")
+    education_school = fields.Char(string="Что заканчивали? ") #TODO make import from dictionary
+    education_year = fields.Integer(string="Когда заканчивали") 
+    education_speciality = fields.Char(string="Специальность по диплому") #TODO make import from dictionary
     occupation = fields.Selection(                                
-                                  [('business', 'Business'),
-                                   ('entrepreneurship', 'Entrepreneurship'),
-                                 ('self-employing', 'Self-employing'), 
-                                 ('employing', 'Employing'),  
-                                 ('student', 'Student') ], string="Occupation " ) 
-    work_experience = fields.Integer(string="Years of experience") 
-    skills = fields.Text(string="Professional skills")
-    achievements = fields.Text(string="Professional achievements")
-    resume_portfolio = fields.Text(string="Link(s) to CV, portfolio, Github, etc")
-    have_team = fields.Boolean(string="Have a team?")
-    team_role = fields.Char(string="Role in team")
-    have_intellectual_property = fields.Boolean(string="Have a patents or over IP?")
-    patents =  fields.Text(string="Refs to patents, other IP ")
-    have_company = fields.Boolean(string="Have a company?")
-    company_inn = fields.Char(string="Company tax ID")
+                                  [('business', 'Собственный бизнес'),
+                                   ('entrepreneurship', 'Предприниматель'),
+                                 ('self-employing', 'Самозанятый'), 
+                                 ('employing', 'Работа по найму'),  
+                                 ('student', 'Обучение') ], string="Род занятий " ) 
+    work_experience = fields.Integer(string="Опыт работы") 
+    skills = fields.Text(string="авыки (например, технологии - SQL,Data Science, коптеры)")
+    achievements = fields.Text(string="Достижения / Профессиональный опыт")
+    resume_portfolio = fields.Text(string="Резюме / Портфолио  - файл / ссылка / Профиль Github / Профиль LinkedIn")
+    have_team = fields.Char(string="Название команды")
+    team_role = fields.Char(string="Роль в команде")
+    have_intellectual_property = fields.Boolean(string="Являетесь ли автором объектов интеллектуальной собственности (есть ли патент)?")
+    patents =  fields.Text(string="Ссылки на патенты, свидетельства, и т.д.")
+    have_company = fields.Boolean(string="Есть ли юр.лицо")
+    company_inn = fields.Char(string="ИНН юр.лица")
     
     #todo add KYC fields here and in views
     # document_type
