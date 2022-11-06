@@ -1,0 +1,179 @@
+
+.o_kanban_view.o_theme_kanban {
+  background-color: #fcfcfc;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_ungrouped {
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  margin: 0 0 0 -52px;
+}
+@media (max-width: 767px) {
+  .o_kanban_view.o_theme_kanban.o_kanban_ungrouped {
+    padding-left: 8px;
+    padding-right: 16px;
+  }
+}
+.o_kanban_view.o_theme_kanban.o_kanban_ungrouped .o_kanban_record {
+  -ms-flex: 1 0 220px;
+  -moz-flex: 1 0 220px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 220px;
+  flex: 1 0 220px;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record {
+  margin-left: 60px;
+  padding: 0;
+  box-shadow: none;
+  background: none;
+  border: none;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_browser_bar:before {
+  content: "•••";
+  display: block;
+  padding-left: 10px;
+  color: #e3e3e3;
+  font: 12px/20px Courier, monospace;
+  letter-spacing: -1px;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record.o_theme_installed .o_theme_preview_top {
+  border-color: #337ab7;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record.o_theme_installed .o_theme_preview_top > .fa-check-circle {
+  position: absolute;
+  top: 10px;
+  left: auto;
+  bottom: auto;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top {
+  border: 1px solid #c9c9c9;
+  border-radius: 2px;
+  -ms-transform-origin: center bottom 0;
+  -webkit-transform-origin: center bottom 0;
+  -moz-transform-origin: center bottom 0;
+  transform-origin: center bottom 0;
+  -webkit-transition: all 0.1s ease 0s;
+  -moz-transition: all 0.1s ease 0s;
+  -o-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top .o_theme_cover,
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top .o_theme_logo,
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top .o_theme_screenshot {
+  width: 100%;
+  padding-bottom: 127%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 40% 32%;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top .o_theme_cover {
+  background-size: contain;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_top .o_theme_screenshot {
+  background-size: cover;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_bottom h5,
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_theme_preview_bottom h6 {
+  line-height: 16px;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_button_area {
+  position: absolute;
+  top: 20px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  -webkit-transition: opacity 100ms ease 0s;
+  -moz-transition: opacity 100ms ease 0s;
+  -o-transition: opacity 100ms ease 0s;
+  transition: opacity 100ms ease 0s;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -webkit-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  background-image: -o-linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+  padding: 10% 20%;
+  opacity: 0;
+  visibility: hidden;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_button_area > .btn {
+  padding: 14px 16px;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record .o_button_area hr {
+  width: 100%;
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record:not(.o_theme_installed) .o_theme_preview_top:hover {
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+  transform: translateY(-10px);
+  border-color: #bababa;
+  box-shadow: 0 15px 12px -8px rgba(0, 0, 0, 0.4);
+}
+.o_kanban_view.o_theme_kanban .o_kanban_record:not(.o_theme_installed) .o_theme_preview_top:hover .o_button_area {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.2s ease 0.1s;
+  -moz-transition: opacity 0.2s ease 0.1s;
+  -o-transition: opacity 0.2s ease 0.1s;
+  transition: opacity 0.2s ease 0.1s;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group {
+  background-color: #fcfcfc;
+  padding: 0 20px;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group .o_kanban_header {
+  height: 30px;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group .o_kanban_header .o_column_title {
+  padding: 0;
+  color: #666666;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group .o_kanban_header:hover .o_kanban_config,
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group .o_kanban_header.open .o_kanban_config {
+  display: none;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group .o_theme_preview_top {
+  border-color: #d3d3d3;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group:nth-child(even) .o_theme_cover,
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_group:nth-child(even) .o_theme_logo {
+  background-color: white;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_record {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_record .o_theme_preview_top .o_theme_cover,
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_record .o_theme_preview_top .o_theme_logo {
+  padding-bottom: 50%;
+  background-size: 32% 62%;
+}
+.o_kanban_view.o_theme_kanban.o_kanban_grouped .o_kanban_record .o_theme_preview_top .o_theme_cover {
+  background-size: cover;
+}
